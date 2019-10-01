@@ -1,0 +1,40 @@
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 
+        'bioimage bio bio'
+        'infoBox1 infoBox2 infoBox3';
+    grid-template-columns: repeat(3, 1fr);
+
+    .bio-image {
+        grid-area: bioimage;
+        margin: auto; 
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
+    }
+    
+    .bio {
+        grid-area: bio;
+    }
+    
+    .infoBox-1 {
+        grid-area: infoBox1;
+    }
+    
+    .infoBox-2 {
+        grid-area: infoBox2;
+    }
+    
+    .infoBox-3 {
+        grid-area: infoBox3;
+    }
+    
+    .infoBox {
+        background: lighten($primary-color, 5);
+        padding: 0.5rem; 
+        border-bottom: $secondary-color 5px solid; 
+    }
+}
+
+
+

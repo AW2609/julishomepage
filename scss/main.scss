@@ -1,6 +1,7 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
+@import 'about';
+
 
 * {
     box-sizing: border-box; 
@@ -9,7 +10,7 @@
 body {
     @include background();
     background: $primary-color;
-    color: #fff;
+    color: set-text-color($primary-color);
     height: 100%;
     margin: 0; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -33,7 +34,7 @@ h1, h2, h3 {
 }
 
 a {
-    color: #fff; 
+    color: set-text-color($primary-color);
     text-decoration: none;
 }
 
@@ -72,3 +73,16 @@ main {
         }
     }
 }
+
+#main-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    padding: 1rem; 
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color); 
+    height: 3.5rem;
+}
+
+@import 'mobile';
