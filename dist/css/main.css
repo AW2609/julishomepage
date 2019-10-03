@@ -141,6 +141,13 @@
   background: #c4c4c4;
   color: #000; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+
 * {
   box-sizing: border-box; }
 
