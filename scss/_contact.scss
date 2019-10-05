@@ -10,12 +10,14 @@
         font-size: 2rem; 
         border: 3px #fff solid; 
         padding: 1.5rem 2rem; 
-        margin-bottom: 3rem;
+        margin: 1.5rem 0.5rem;
         @include easeOut; 
 
         &:hover {
             background: $secondary-color; 
             color: set-text-color($secondary-color);
+            border-color: set-text-color($primary-color);
+            font-weight: bold;
 
             span {
                 color: set-text-color($secondary-color);

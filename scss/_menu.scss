@@ -46,6 +46,7 @@
 
     &.show {
         visibility: visible;
+        z-index: 2;
     }
 
     &-branding, &-nav {
