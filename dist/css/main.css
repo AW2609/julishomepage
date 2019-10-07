@@ -41,14 +41,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #262626;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #333;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -129,7 +129,7 @@
   .about-info .infoBox-3 {
     grid-area: infoBox3; }
   .about-info .infoBox {
-    background: #515151;
+    background: #404040;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
 
@@ -159,7 +159,7 @@
   color: #fff; }
 
 .btn-light {
-  background: #c4c4c4;
+  background: #b3b3b3;
   color: #000; }
 
 .boxes {
@@ -187,22 +187,40 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem; }
   .themes .option {
+    display: block;
     padding: 8rem 2rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
     width: 100%;
     border: 3px #fff solid; }
+    .themes .option.dark {
+      background: url(../img/themes/blackcat.jpg);
+      background-size: cover; }
+    .themes .option.nightblue {
+      background: url(../img/themes/nightblue.jpg);
+      background-size: cover; }
+    .themes .option.light {
+      background: url(../img/themes/light.jpg);
+      background-size: cover;
+      color: #000; }
+    .themes .option.dragon {
+      background: url(../img/themes/dragon.jpg);
+      background-size: cover; }
     .themes .option:hover {
       opacity: 0.5;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
+  .themes .btn, .themes .btn-dark, .themes .btn-light {
+    text-align: center; }
+    .themes .btn i, .themes .btn-dark i, .themes .btn-light i {
+      margin-right: 10px; }
 
 * {
   box-sizing: border-box; }
 
 body {
-  background: #444;
+  background: #333;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -220,7 +238,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(51, 51, 51, 0.9); }
 
 h1, h2, h3 {
   margin: 0;
@@ -230,7 +248,7 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(56, 56, 56, 0.5); }
 
 a {
   color: #fff;
@@ -265,7 +283,7 @@ main {
   width: 100%;
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
+  background: #1a1a1a;
   color: #fff;
   height: 3.5rem; }
 
@@ -275,7 +293,9 @@ main {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .themes {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -303,7 +323,9 @@ main {
     grid-template-areas: 'bioimage' 'bio' 'infoBox1' 'infoBox2' 'infoBox3';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .themes {
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
