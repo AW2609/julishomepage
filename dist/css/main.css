@@ -90,20 +90,19 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
-.settings-btn {
+.birthday-btn {
   position: absolute;
   opacity: 1;
   right: 65px;
-  top: 35px;
+  top: 33px;
   margin: 0 20px;
-  height: 28px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.5s ease-out; }
-  .settings-btn i {
+  .birthday-btn i {
     font-size: 1.4rem; }
-  .settings-btn.close {
+  .birthday-btn.close {
     visibility: none;
     opacity: 0;
     z-index: -1; }
