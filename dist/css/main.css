@@ -90,12 +90,15 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
 .birthday-btn {
   position: absolute;
   opacity: 1;
   right: 65px;
   top: 33px;
-  margin: 0 20px;
+  margin: 0 30px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -178,6 +181,22 @@
       font-weight: bold; }
       .boxes div:hover span {
         color: #000; }
+
+.themes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem; }
+  .themes .option {
+    padding: 8rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    border: 3px #fff solid; }
+    .themes .option:hover {
+      opacity: 0.5;
+      border-color: #eece1a;
+      transition: all 0.5s ease-out; }
 
 * {
   box-sizing: border-box; }
