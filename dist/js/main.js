@@ -1,3 +1,4 @@
+
 // Select DOM Items 
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
@@ -37,4 +38,51 @@ function toggleMenu() {
         // Set Menu State 
         showMenu = false;
     }
+}
+
+function getConfig() {
+    // check for Cookies
+    let cookies = document.cookie;
+    theme = getCookie('css');
+    if (theme) {
+        console.log(theme);
+        let pagestyle = document.getElementById('pagestyle');
+        pagestyle.setAttribute('href', theme);
+    } else {
+        console.log('No cookies found');
+    }
+}
+
+function changeTheme(theme) {
+    let pagestyle = document.getElementById('pagestyle');
+    pagestyle.setAttribute('href', theme);
+
+    setCookie('css', theme, 10000);
+}
+
+function getCookie(cName) {
+    let name = cName + '=';
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let cArray = decodedCookie.split(';');
+    for (let i = 0; i < cArray.length; i++) {
+        let cookie = cArray[i];
+
+        while (cookie.charAt(0) == ' ') {
+            cookie = cookie.substring(1);
+        }
+
+        if (cookie.indexOf(name) == 0) {
+            return cookie.substring(name.length, cookie.length);
+        }
+    }
+
+    return null;
+}
+
+function setCookie(cName, cValue, exDays) {
+    let d = new Date();
+    d.setTime(d.getTime() + (exDays * 24 * 60 * 60 * 1000));
+
+    let expires = 'expires=' + d.toUTCString();
+    document.cookie = cName + '=' + cValue + ';' + expires + ';path=/';
 }
