@@ -196,17 +196,20 @@
     border: 3px #fff solid; }
     .themes .option.dark {
       background: url(../img/themes/blackcat.jpg);
-      background-size: cover; }
+      background-size: cover;
+      color: #fff; }
     .themes .option.nightblue {
       background: url(../img/themes/nightblue.jpg);
-      background-size: cover; }
+      background-size: cover;
+      color: #fff; }
     .themes .option.light {
       background: url(../img/themes/light.jpg);
       background-size: cover;
       color: #000; }
     .themes .option.dragon {
       background: url(../img/themes/dragon.jpg);
-      background-size: cover; }
+      background-size: cover;
+      color: #fff; }
     .themes .option:hover {
       opacity: 0.5;
       border-color: #eece1a;

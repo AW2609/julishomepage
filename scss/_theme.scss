@@ -16,11 +16,13 @@
         &.dark {
             background: url(../img/themes/blackcat.jpg); 
             background-size: cover; 
+            color: #fff;
         }
 
         &.nightblue {
             background: url(../img/themes/nightblue.jpg);
             background-size: cover; 
+            color: #fff;
         }
         
         &.light {
@@ -32,6 +34,7 @@
         &.dragon {
             background: url(../img/themes/dragon.jpg);
             background-size: cover; 
+            color: #fff
         }
 
         &:hover {

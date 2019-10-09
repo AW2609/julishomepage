@@ -1,5 +1,5 @@
-$primary-color: rgb(12, 12, 78);
-$secondary-color: #d33c16;
+$primary-color: lightgrey;
+$secondary-color: rgb(197, 144, 8);
 
 @import 'config';
 @import 'menu';
@@ -8,6 +8,7 @@ $secondary-color: #d33c16;
 @import 'work';
 @import 'contact';
 @import 'theme';
+
 
 
 * {

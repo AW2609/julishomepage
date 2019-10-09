@@ -33,7 +33,7 @@
 .btn-dark {
     @extend .btn;
     background: darken($primary-color, 50);
-    color: set-text-color($primary-color);
+    color: set-text-color(darken($primary-color, 50));
 }
 
 .btn-light {
