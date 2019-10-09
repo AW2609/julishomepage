@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.96;
   visibility: hidden; }
   .menu.show {
     visibility: visible;
@@ -133,14 +133,14 @@
     padding: 0.5rem;
     border-bottom: #eed54bfd 5px solid; }
 
-.projects {
+.quotesWrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.7rem; }
-  .projects img {
+  .quotesWrapper img {
     width: 100%;
     border: 3px #fff solid; }
-    .projects img:hover {
+    .quotesWrapper img:hover {
       opacity: 0.5;
       border-color: #eed54bfd;
       transition: all 0.5s ease-out; }
@@ -291,11 +291,11 @@ main {
   height: 3.5rem; }
 
 @media screen and (min-width: 1171px) {
-  .projects {
+  .quotesWrapper {
     grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
-  .projects {
+  .quotesWrapper {
     grid-template-columns: repeat(3, 1fr); }
   .themes {
     grid-template-columns: repeat(2, 1fr); } }
@@ -325,7 +325,7 @@ main {
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'infoBox1' 'infoBox2' 'infoBox3';
     grid-template-columns: 1fr; }
-  .projects {
+  .quotesWrapper {
     grid-template-columns: repeat(2, 1fr); }
   .themes {
     grid-template-columns: 1fr; } }
@@ -333,5 +333,5 @@ main {
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
-  .projects {
+  .quotesWrapper {
     grid-template-columns: 1fr; } }

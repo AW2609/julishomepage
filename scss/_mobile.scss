@@ -1,13 +1,13 @@
 // Widescreens 
 @include mediaXl {
-    .projects {
+    .quotesWrapper {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
 // Desktops & Laptops 
 @include mediaLg {
-    .projects {
+    .quotesWrapper {
         grid-template-columns: repeat(3, 1fr);
     }
     .themes {
@@ -62,7 +62,7 @@
         grid-template-columns: 1fr;
     }
 
-    .projects {
+    .quotesWrapper {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -77,7 +77,7 @@
         margin-top: 10vh;
     }
 
-    .projects {
+    .quotesWrapper {
         grid-template-columns: 1fr;
     }
 }
