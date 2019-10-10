@@ -261,6 +261,9 @@
 * {
   box-sizing: border-box; }
 
+html {
+  height: 100%; }
+
 body {
   background: #5e1111;
   color: #fff;
