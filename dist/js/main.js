@@ -7,6 +7,7 @@ const menuNav = document.querySelector('.menu-nav');
 const navItems = document.querySelectorAll('.nav-item');
 const birthdayBtn = document.querySelector('.birthday-btn');
 
+
 // Set Initial State Of Menu
 let showMenu = false;
 
@@ -85,4 +86,22 @@ function setCookie(cName, cValue, exDays) {
 
     let expires = 'expires=' + d.toUTCString();
     document.cookie = cName + '=' + cValue + ';' + expires + ';path=/';
+}
+
+function showQuote(text) {
+    const textBox = document.querySelector('.textBox');
+    const quote = 'text/quotes/' + text;
+
+    let http = new XMLHttpRequest();
+    http.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            textBox.textContent = this.responseText;
+        } else {
+            textBox.textContent = "Sorry, Fehler beim Laden des Zitats aufgetreten..."
+        }
+    };
+
+    textBox.classList.add('show');
+    http.open("GET", quote, true);
+    http.send();
 }

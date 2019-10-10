@@ -1,5 +1,19 @@
 // Quotes
 
+.textBox {
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    opacity: 0.96; 
+    visibility: hidden;
+    @include easeOut;
+
+    &.show {
+        visibility: visible;
+        z-index: 2;
+    }
+}
+
 .quotesWrapper {
     display: grid; 
     grid-template-columns: repeat(3, 1fr);
@@ -17,27 +31,4 @@
     }
 }
 
-// Button Styles
-.btn {
-    display: block; 
-    padding: 0.5rem 1rem; 
-    border: 0; 
-    margin-bottom: 0.3rem; 
 
-    &:hover {
-        background: $secondary-color; 
-        color: set-text-color($secondary-color);
-    }
-}
-
-.btn-dark {
-    @extend .btn;
-    background: darken($primary-color, 50);
-    color: set-text-color(darken($primary-color, 50));
-}
-
-.btn-light {
-    @extend .btn; 
-    background: lighten($primary-color, 50);
-    color: set-text-color(lighten($primary-color, 50));
-}

@@ -1,3 +1,20 @@
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #d33c16;
+    color: #000; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #7070e9;
+  color: #000; }
+
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -133,6 +150,17 @@
     padding: 0.5rem;
     border-bottom: #d33c16 5px solid; }
 
+.textBox {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.96;
+  visibility: hidden;
+  transition: all 0.5s ease-out; }
+  .textBox.show {
+    visibility: visible;
+    z-index: 2; }
+
 .quotesWrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -144,23 +172,6 @@
       opacity: 0.5;
       border-color: #d33c16;
       transition: all 0.5s ease-out; }
-
-.btn, .btn-dark, .btn-light {
-  display: block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #d33c16;
-    color: #000; }
-
-.btn-dark {
-  background: black;
-  color: #fff; }
-
-.btn-light {
-  background: #7070e9;
-  color: #000; }
 
 .boxes {
   display: flex;
