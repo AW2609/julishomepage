@@ -88,20 +88,27 @@ function setCookie(cName, cValue, exDays) {
     document.cookie = cName + '=' + cValue + ';' + expires + ';path=/';
 }
 
-function showQuote(text) {
+function showQuote(text, element) {
     const textBox = document.querySelector('.textBox');
+    const textContent = document.querySelector('.textContent');
     const quote = 'text/quotes/' + text;
+    const parentTop = element.parentNode.offsetTop;
 
     let http = new XMLHttpRequest();
     http.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            textBox.textContent = this.responseText;
+            textContent.textContent = this.responseText;
         } else {
-            textBox.textContent = "Sorry, Fehler beim Laden des Zitats aufgetreten..."
+            textContent.textContent = "Sorry, Fehler beim Laden des Zitats aufgetreten..."
         }
     };
 
+    textBox.style.top = parentTop + "px";
     textBox.classList.add('show');
     http.open("GET", quote, true);
     http.send();
+}
+
+function closeQuote() {
+    document.querySelector('.textBox').classList.remove('show');
 }

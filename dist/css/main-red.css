@@ -151,14 +151,41 @@
     border-bottom: #eed54bfd 5px solid; }
 
 .textBox {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  opacity: 0.96;
-  visibility: hidden;
-  transition: all 0.5s ease-out; }
+  position: absolute;
+  z-index: -1;
+  top: 75px;
+  left: 10vw;
+  right: 10vw;
+  padding: 40px;
+  margin-bottom: 20px;
+  border: 3px solid #eed54bfd;
+  background-color: #5e1111;
+  opacity: 0;
+  transition: opacity 0.5s ease-out; }
+  .textBox .exit {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.3rem;
+    color: #eed54bfd; }
+    .textBox .exit:hover {
+      cursor: pointer;
+      color: rgba(193, 166, 18, 0.992157); }
+  .textBox .content {
+    width: fit-content; }
+    .textBox .content .textContent {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin: 5px 15px 10px 15px;
+      text-align: center; }
+    .textBox .content .fa-quote-right {
+      display: block;
+      text-align: left; }
+    .textBox .content .fa-quote-left {
+      display: block;
+      text-align: right; }
   .textBox.show {
-    visibility: visible;
+    opacity: 1;
     z-index: 2; }
 
 .quotesWrapper {

@@ -1,15 +1,53 @@
 // Quotes
 
 .textBox {
-    position: fixed; 
-    top: 0; 
-    width: 100%;
-    opacity: 0.96; 
-    visibility: hidden;
-    @include easeOut;
+    position: absolute;
+    z-index: -1;
+    top: 75px;
+    left: 10vw;
+    right: 10vw;
+    padding: 40px;
+    margin-bottom: 20px;
+    border: 3px solid $secondary-color;
+    background-color: $primary-color;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
 
+    .exit {
+        position: absolute; 
+        top: 15px; 
+        left: 15px; 
+        font-size: 1.3rem;
+        color: $secondary-color;
+
+        &:hover {
+            cursor: pointer;
+            color: darken($secondary-color, 20);
+        }
+    }
+
+    .content {
+        width: fit-content;
+
+        .textContent {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin: 5px 15px 10px 15px;
+            text-align: center;
+        }
+        .fa-quote-right {
+            display: block;
+            text-align: left;
+        }
+    
+        .fa-quote-left {
+            display: block; 
+            text-align: right;
+        }
+    }
+    
     &.show {
-        visibility: visible;
+        opacity: 1;
         z-index: 2;
     }
 }

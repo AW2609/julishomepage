@@ -53,7 +53,14 @@
     </header>
 
     <main id="quotes">
-        <div class="textBox"></div>
+        <div class="textBox">
+            <i class="fas fa-times-circle exit" onclick="closeQuote()"></i>
+            <div class="content">
+                <i class="fas fa-quote-left"></i>
+                <div class="textContent"></div>
+                <i class="fas fa-quote-right"></i>
+            </div>
+        </div>
         <h1 class="lg-heading">
             Wichtige <span class="text-secondary">Zitate</span>
         </h1>
@@ -62,18 +69,18 @@
         </h2>
         <div class="quotesWrapper">
             <div class="item">
-                <a href="#!" onclick="showQuote('andre.txt')">
+                <a href="#!" onclick="showQuote('andre.txt', this)">
                     <img src="img/quotes/andre.jpg" alt="André">
                 </a>
-                <a href="#!" class="btn-light" onclick="showQuote('andre.txt')">
+                <a href="#!" class="btn-light" onclick="showQuote('andre.txt', this)">
                     <i class="fas fa-angle-double-right"></i> Sag's mir!
                 </a>
             </div>
             <div class="item">
-                <a href="#!" onclick="showQuote('johnny.txt')">
+                <a href="#!" onclick="showQuote('johnny.txt', this)">
                     <img src="img/quotes/johnny.jpg" alt="Johnny">
                 </a>
-                <a href="#!" class="btn-light" onclick="showQuote('johnny.txt')">
+                <a href="#!" class="btn-light" onclick="showQuote('johnny.txt', this)">
                     <i class="fas fa-angle-double-right"></i> Sag's mir, Bitch!
                 </a>
             </div>
