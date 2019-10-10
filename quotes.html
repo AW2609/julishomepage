@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="css/main-dark.css">
+    <title>Zitate</title>
+</head>
+
+<body onload="getConfig()">
+    <header>
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <nav class="menu">
+            <div class="menu-branding">
+                <div class="portrait"></div>
+            </div>
+            <ul class="menu-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        About Juli
+                    </a>
+                </li>
+                <li class="nav-item current">
+                    <a href="quotes.html" class="nav-link">
+                        Zitate
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        Kontakt
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="theme.html" class="nav-link">
+                        Styling / Theme
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="quotes">
+        <div class="textBox">
+            <i class="fas fa-times-circle exit" onclick="closeQuote()"></i>
+            <div class="content">
+                <i class="fas fa-quote-left"></i>
+                <div class="textContent"></div>
+                <i class="fas fa-quote-right"></i>
+            </div>
+        </div>
+        <h1 class="lg-heading">
+            Wichtige <span class="text-secondary">Zitate</span>
+        </h1>
+        <h2 class="sm-heading">
+            Was deine Leute &uuml;ber dich sagen...
+        </h2>
+        <div class="quotesWrapper">
+            <div class="item">
+                <a href="#!" onclick="showQuote('andre.txt', this)">
+                    <img src="img/quotes/andre.jpg" alt="André">
+                </a>
+                <a href="#!" class="btn-light" onclick="showQuote('andre.txt', this)">
+                    <i class="fas fa-angle-double-right"></i> Sag's mir!
+                </a>
+            </div>
+            <div class="item">
+                <a href="#!" onclick="showQuote('johnny.txt', this)">
+                    <img src="img/quotes/johnny.jpg" alt="Johnny">
+                </a>
+                <a href="#!" class="btn-light" onclick="showQuote('johnny.txt', this)">
+                    <i class="fas fa-angle-double-right"></i> Sag's mir, Bitch!
+                </a>
+            </div>
+            <div class="item">
+                <a href="#!">
+                    <img src="img/project3.jpg" alt="Project">
+                </a>
+                <a href="#!" class="btn-light">
+                    <i class="fas fa-angle-double-right"></i> Sag's mir!
+                </a>
+            </div>
+            <div class="item">
+                <a href="#!">
+                    <img src="img/project4.jpg" alt="Project">
+                </a>
+                <a href="#!" class="btn-light">
+                    <i class="fas fa-angle-double-right"></i> Sag's mir!
+                </a>
+            </div>
+            <div class="item">
+                <a href="#!">
+                    <img src="img/project5.jpg" alt="Project">
+                </a>
+                <a href="#!" class="btn-light">
+                    <i class="fas fa-angle-double-right"></i> Sag's mir!
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer id="main-footer">
+        Copyright &copy; 2020;
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

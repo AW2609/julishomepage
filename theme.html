@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="css/main-dark.css">
+    <title>Choose your Theme</title>
+</head>
+
+<body onload="getConfig()">
+    <header>
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <nav class="menu">
+            <div class="menu-branding">
+                <div class="portrait"></div>
+            </div>
+            <ul class="menu-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        About Juli
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="quotes.html" class="nav-link">
+                        Zitate
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        Kontakt
+                    </a>
+                </li>
+                <li class="nav-item current">
+                    <a href="theme.html" class="nav-link">
+                        Styling / Theme
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="theme">
+        <h1 class="lg-heading">
+            W&auml;hle dein <span class="text-secondary">Theme</span>
+        </h1>
+        <h2 class="sm-heading">
+            Individuelles Styling nach deinem Geschmack!
+        </h2>
+        <div class="themes">
+            <div class="stylingOption">
+                <a href="#" class="option dark" onclick="changeTheme('css/main-dark.css')">
+                    Black Cat
+                </a>
+                <a href="#" class="btn-dark" onclick="changeTheme('css/main-dark.css')">
+                    <i class="fas fa-cat"></i> Into the dark!
+                </a>
+            </div>
+            <div class="stylingOption">
+                <a href="#" class="option nightblue" onclick="changeTheme('css/main-blue.css')">
+                    Nightblue
+                </a>
+                <a href="#" class="btn-dark" onclick="changeTheme('css/main-blue.css')">
+                    <i class="fas fa-moon"></i> Live the night!
+                </a>
+            </div>
+            <div class="stylingOption">
+                <a href="#" class="option light" onclick="changeTheme('css/main-light.css')">
+                    Light
+                </a>
+                <a href="#" class="btn-dark" onclick="changeTheme('css/main-light.css')">
+                    <i class="fas fa-lightbulb"></i> Light it up!
+                </a>
+            </div>
+            <div class="stylingOption">
+                <a href="#" class="option dragon" onclick="changeTheme('css/main-red.css')">
+                    Firedragon
+                </a>
+                <a href="#" class="btn-dark" onclick="changeTheme('css/main-red.css')">
+                    <i class="fas fa-dragon"></i> Let it burn!
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer id="main-footer">
+        Copyright &copy; 2020;
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
