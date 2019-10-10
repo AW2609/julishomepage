@@ -16,6 +16,10 @@ $secondary-color:  #eed54bfd;
     box-sizing: border-box; 
 }
 
+html {
+    height: 100%;
+}
+
 body {
     @include background();
     background: $primary-color;

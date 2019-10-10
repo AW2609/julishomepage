@@ -46,7 +46,6 @@ function getConfig() {
     let cookies = document.cookie;
     theme = getCookie('css');
     if (theme) {
-        console.log(theme);
         let pagestyle = document.getElementById('pagestyle');
         pagestyle.setAttribute('href', theme);
     } else {
