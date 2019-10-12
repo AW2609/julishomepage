@@ -53,11 +53,10 @@
         display: flex; 
         flex-flow: column wrap; 
         align-items: center; 
-        justify-content: center; 
         float: left; 
         width: 50%;
         height: 100vh; 
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     &-nav {
@@ -65,6 +64,7 @@
         padding: 0; 
         background: darken($primary-color, 5);
         list-style: none; 
+        flex-wrap: nowrap;
         transform: translate3d(0, -100%, 0);
         @include easeOut;
 
@@ -76,6 +76,7 @@
     
     // Branding Site
     &-branding {
+        justify-content: center;
         background: $primary-color;
         transform: translate3d(0, 100%, 0);
         @include easeOut; 
@@ -96,8 +97,15 @@
     }
 
     .nav-item {
+        display: block;
+        text-align: center;
+        width: 100%;
         transform: translate3d(100vw, 0, 0);
         @include easeOut; 
+
+        &:nth-child(1) {
+            margin-top: 8vh;
+        }
 
         &.show {
             // Slide in from right
