@@ -6,32 +6,52 @@ const menuBranding = document.querySelector('.menu-branding');
 const menuNav = document.querySelector('.menu-nav');
 const navItems = document.querySelectorAll('.nav-item');
 const birthdayBtn = document.querySelector('.birthday-btn');
-
+const menuPw = document.querySelector('.menu-pw');
+const pwBtn = document.querySelector('.pwBtn');
+const pwInput = document.getElementById('pw');
 
 // Set Initial State Of Menu
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
+// add password check if user releases enter key 
+pwInput.addEventListener('keyup', function (event) {
+    // number 13 = Enter
+    if (event.keyCode === 13) {
+        event.preventDefault(); // just in case
+        pwBtn.click();
+    }
+});
 
 function toggleMenu() {
+
     if (!showMenu) {
-        menuBtn.classList.add('close');
-        menu.classList.add('show');
-        menuBranding.classList.add('show');
-        menuNav.classList.add('show');
-        navItems.forEach(item => item.classList.add('show'));
+        // Set Menu State 
+        showMenu = true;
+
         if (birthdayBtn) {
             birthdayBtn.classList.add('close');
         }
+        menuBtn.classList.add('close');
+        menu.classList.add('show');
+        menuBranding.classList.add('show');
 
-        // Set Menu State 
-        showMenu = true;
+        console.log(getCookie('pw'));
+        if (getCookie('pw') == 'true') {
+            menuPw.classList.add('show');
+            return;
+        }
+
+        menuNav.classList.add('show');
+        navItems.forEach(item => item.classList.add('show'));
+
     } else {
         menuBtn.classList.remove('close');
         menu.classList.remove('show');
         menuBranding.classList.remove('show');
         menuNav.classList.remove('show');
         navItems.forEach(item => item.classList.remove('show'));
+        menuPw.classList.remove('show');
         if (birthdayBtn) {
             birthdayBtn.classList.remove('close');
         }
@@ -43,13 +63,17 @@ function toggleMenu() {
 
 function getConfig() {
     // check for Cookies
-    let cookies = document.cookie;
     theme = getCookie('css');
+    pw = getCookie('pw');
+
     if (theme) {
         let pagestyle = document.getElementById('pagestyle');
         pagestyle.setAttribute('href', theme);
-    } else {
-        console.log('No cookies found');
+    }
+
+    // set pw to true if no cookie exists at all
+    if (!pw) {
+        setCookie('pw', 'true');
     }
 }
 
@@ -80,11 +104,15 @@ function getCookie(cName) {
 }
 
 function setCookie(cName, cValue, exDays) {
-    let d = new Date();
-    d.setTime(d.getTime() + (exDays * 24 * 60 * 60 * 1000));
+    if (exDays) {
+        let d = new Date();
+        d.setTime(d.getTime() + (exDays * 24 * 60 * 60 * 1000));
 
-    let expires = 'expires=' + d.toUTCString();
-    document.cookie = cName + '=' + cValue + ';' + expires + ';path=/';
+        let expires = 'expires=' + d.toUTCString();
+        document.cookie = cName + '=' + cValue + ';' + expires + ';path=/';
+    } else {
+        document.cookie = cName + '=' + cValue + ';path=/';
+    }
 }
 
 function showQuote(text, element) {
@@ -110,4 +138,13 @@ function showQuote(text, element) {
 
 function closeQuote() {
     document.querySelector('.textBox').classList.remove('show');
+}
+
+function checkPw() {
+    if (pwInput.value === 'ichmagbier') {
+        setCookie('pw', 'false');
+        menuPw.classList.remove('show');
+        menuNav.classList.add('show');
+        navItems.forEach(item => item.classList.add('show'));
+    }
 }

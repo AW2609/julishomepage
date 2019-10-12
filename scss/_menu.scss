@@ -39,6 +39,7 @@
 // Menu Overlay
 .menu {
     position: fixed; 
+    display: flex;
     top: 0; 
     width: 100%;
     opacity: 0.96; 
@@ -52,34 +53,36 @@
     &-branding, &-nav {
         display: flex; 
         flex-flow: column wrap; 
-        align-items: center; 
-        float: left; 
-        width: 50%;
+        align-items: center;
         height: 100vh; 
         overflow-x: hidden;
     }
 
     &-nav {
+        width: 0;
         margin: 0; 
         padding: 0; 
         background: darken($primary-color, 5);
         list-style: none; 
         flex-wrap: nowrap;
         transform: translate3d(0, -100%, 0);
-        @include easeOut;
+        transition: all 0.5s ease-out, width 0.5s ease-out 0.5s;
+        
 
         &.show {
             //Slide in from Top
+            width: 50%;
             transform: translate3d(0, 0, 0);
         }
     }
     
     // Branding Site
     &-branding {
+        width: 50%;
         justify-content: center;
         background: $primary-color;
         transform: translate3d(0, 100%, 0);
-        @include easeOut; 
+        @include easeOut;
 
         &.show {
             //Slide in from Bottom
@@ -101,7 +104,7 @@
         text-align: center;
         width: 100%;
         transform: translate3d(100vw, 0, 0);
-        @include easeOut; 
+        @include easeOut;
 
         &:nth-child(1) {
             margin-top: 8vh;
@@ -131,11 +134,29 @@
             color: $secondary-color;
         }
     }
+
+    &-pw {
+        justify-content: center;
+        height: 100vh;
+        width: 0;
+        margin: 0; 
+        padding: 0; 
+        background: darken($primary-color, 5);
+        transform: translate3d(0, -100%, 0);
+        transition: all 0.5s ease-out, width 0.5s 0.5s;
+
+        &.show {
+            //Slide in from Top
+            transform: translate3d(0, 0, 0);
+            width: 50%;
+        }
+
+    }
 }
 
 // Delay each nav item slide by 0.1s
 @for $x from 1 through 5 {
     .nav-item:nth-child(#{$x}) {
-        transition-delay: $x * 0.1s;
+        transition-delay: ($x * 0.1s) + 0.5s;
     }
 }
