@@ -42,7 +42,7 @@
   display: flex;
   top: 0;
   width: 100%;
-  opacity: 0.96;
+  opacity: 0.98;
   visibility: hidden; }
   .menu.show {
     visibility: visible;
@@ -130,6 +130,54 @@
 
 .nav-item:nth-child(5) {
   transition-delay: 1s; }
+
+.pw-wrapper {
+  margin: auto;
+  padding: 20px;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  max-width: 700px;
+  transition: all 0.5s ease-out 0.75s; }
+  .pw-wrapper.show {
+    opacity: 1; }
+  .pw-wrapper h3.sm-heading {
+    padding: 0.7rem 1rem;
+    border-radius: 10px; }
+    .pw-wrapper h3.sm-heading p {
+      font-size: 0;
+      line-height: 1;
+      color: #eed54bfd;
+      transition: all 0.5s ease-out; }
+      .pw-wrapper h3.sm-heading p.show {
+        font-size: 0.8rem; }
+  .pw-wrapper .pw-input {
+    display: flex;
+    justify-content: center;
+    border: 3px solid #eed54bfd;
+    border-radius: 10px;
+    margin: 20px 0px;
+    height: 3rem; }
+    .pw-wrapper .pw-input #pw {
+      width: 80%;
+      height: 100%;
+      background-color: #480d0d;
+      border: none;
+      border-radius: 10px;
+      padding: 0 5px;
+      color: #eed54bfd; }
+    .pw-wrapper .pw-input .pwBtn {
+      width: 20%;
+      border: none;
+      background-color: #eed54bfd;
+      font-size: 2rem;
+      transition: all 0.5s ease-out; }
+      .pw-wrapper .pw-input .pwBtn:hover {
+        cursor: pointer;
+        width: 30%; }
 
 .birthday-btn {
   position: absolute;
