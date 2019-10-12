@@ -9,6 +9,8 @@ const birthdayBtn = document.querySelector('.birthday-btn');
 const menuPw = document.querySelector('.menu-pw');
 const pwBtn = document.querySelector('.pwBtn');
 const pwInput = document.getElementById('pw');
+const pwWrapper = document.querySelector('.pw-wrapper');
+const wrongPwNotification = document.querySelector('.wrongPwNotification');
 
 // Set Initial State Of Menu
 let showMenu = false;
@@ -20,6 +22,10 @@ pwInput.addEventListener('keyup', function (event) {
     if (event.keyCode === 13) {
         event.preventDefault(); // just in case
         pwBtn.click();
+    } else {
+        if (wrongPwNotification.classList.contains('show')) {
+            wrongPwNotification.classList.remove('show');
+        }
     }
 });
 
@@ -36,9 +42,10 @@ function toggleMenu() {
         menu.classList.add('show');
         menuBranding.classList.add('show');
 
-        console.log(getCookie('pw'));
+
         if (getCookie('pw') == 'true') {
             menuPw.classList.add('show');
+            pwWrapper.classList.add('show');
             return;
         }
 
@@ -52,6 +59,7 @@ function toggleMenu() {
         menuNav.classList.remove('show');
         navItems.forEach(item => item.classList.remove('show'));
         menuPw.classList.remove('show');
+        pwWrapper.classList.remove('show');
         if (birthdayBtn) {
             birthdayBtn.classList.remove('close');
         }
@@ -141,10 +149,14 @@ function closeQuote() {
 }
 
 function checkPw() {
+
     if (pwInput.value === 'ichmagbier') {
         setCookie('pw', 'false');
         menuPw.classList.remove('show');
+        pwWrapper.classList.add('show');
         menuNav.classList.add('show');
         navItems.forEach(item => item.classList.add('show'));
+    } else {
+        wrongPwNotification.classList.add('show');
     }
 }
