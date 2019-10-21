@@ -203,6 +203,8 @@
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
+    width: 100%;
+    height: auto;
     margin: auto;
     border-radius: 50%;
     border: #d33c16 3px solid; }
