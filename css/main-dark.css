@@ -215,6 +215,8 @@
       text-align: center; }
     .about-info .bio ol {
       text-align: left; }
+      .about-info .bio ol li {
+        margin-bottom: 0.4rem; }
   .about-info .infoBox-1 {
     grid-area: infoBox1; }
   .about-info .infoBox-2 {
@@ -228,8 +230,6 @@
     .about-info .infoBox h3, .about-info .infoBox h6 {
       text-align: center; }
     .about-info .infoBox p {
-      max-height: 40vh;
-      overflow: auto;
       text-align: justify;
       padding: 0 5px; }
 
@@ -390,7 +390,7 @@ header {
   color: #eece1a; }
 
 main {
-  padding: 4rem; }
+  padding: 4rem 4rem 5rem 4rem; }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -473,9 +473,15 @@ main {
     font-size: 3rem; }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     font-size: 1.2rem; }
+  main#home {
+    padding: 3rem 3rem 5rem 3rem; }
+    main#home h1 {
+      margin: 15vh -2rem 3vh -2rem; }
   main {
-    padding: 20px; }
+    padding: 3rem 3rem 5rem 3rem; }
     main h1 {
-      margin-top: 15vh; }
+      margin: 5vh -2rem 3vh -2rem; }
+  .about-info .bio ol {
+    margin-left: -0.8rem; }
   .quotesWrapper {
     grid-template-columns: 1fr; } }
