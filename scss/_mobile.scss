@@ -102,7 +102,7 @@
     h1, h2, h3 {
 
         &.lg-heading {
-            font-size: 4rem;
+            font-size: 3rem;
         }
 
         &.sm-heading {
@@ -110,11 +110,11 @@
         }
     }
 
-    main#home {
-        padding: 10px;
+    main {
+        padding: 20px;
 
         h1 {
-            margin-top: 10vh;
+            margin-top: 15vh;
         }
     }
 
