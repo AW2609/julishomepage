@@ -200,7 +200,8 @@
   display: grid;
   grid-gap: 30px;
   grid-template-areas: 'bioimage bio bio' 'infoBox1 infoBox2 infoBox3';
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(3, 1fr);
+  padding-right: 10px; }
   .about-info .bio-image {
     grid-area: bioimage;
     width: 100%;
@@ -210,6 +211,8 @@
     border: #c59008 3px solid; }
   .about-info .bio {
     grid-area: bio; }
+    .about-info .bio h3 {
+      padding-left: 2vw; }
   .about-info .infoBox-1 {
     grid-area: infoBox1; }
   .about-info .infoBox-2 {
@@ -220,6 +223,13 @@
     background: #e0e0e0;
     padding: 0.5rem;
     border-bottom: #c59008 5px solid; }
+    .about-info .infoBox h3, .about-info .infoBox h6 {
+      text-align: center; }
+    .about-info .infoBox p {
+      max-height: 40vh;
+      overflow: auto;
+      text-align: justify;
+      padding: 0 5px; }
 
 .textBox {
   position: absolute;
