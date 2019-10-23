@@ -5,6 +5,7 @@
         'bioimage bio bio'
         'infoBox1 infoBox2 infoBox3';
     grid-template-columns: repeat(3, 1fr);
+    padding-right: 10px;
 
     .bio-image {
         grid-area: bioimage;
@@ -17,6 +18,10 @@
     
     .bio {
         grid-area: bio;
+
+        h3 {
+            padding-left: 2vw;
+        }
     }
     
     .infoBox-1 {
@@ -35,6 +40,17 @@
         background: lighten($primary-color, 5);
         padding: 0.5rem; 
         border-bottom: $secondary-color 5px solid; 
+
+        h3, h6 {
+            text-align: center;
+        }
+
+        p {
+            max-height: 40vh;
+            overflow: auto;
+            text-align: justify;
+            padding: 0 5px;
+        }
     }
 }
 
