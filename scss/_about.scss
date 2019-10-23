@@ -25,6 +25,10 @@
 
         ol {
             text-align: left;
+
+            li {
+                margin-bottom: 0.4rem;
+            }
         }
     }
     
@@ -50,8 +54,6 @@
         }
 
         p {
-            max-height: 40vh;
-            overflow: auto;
             text-align: justify;
             padding: 0 5px;
         }
