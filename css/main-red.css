@@ -238,8 +238,6 @@
   top: 75px;
   left: 10vw;
   right: 10vw;
-  max-height: 50%;
-  overflow: auto;
   padding: 40px;
   border: 3px solid #eed54bfd;
   background-color: #5e1111;
@@ -255,7 +253,10 @@
       cursor: pointer;
       color: rgba(193, 166, 18, 0.992157); }
   .textBox .content {
-    width: fit-content; }
+    width: fit-content;
+    max-height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden; }
     .textBox .content .textContent {
       font-size: 1.2rem;
       font-style: italic;
