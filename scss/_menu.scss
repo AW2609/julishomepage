@@ -67,7 +67,7 @@
         flex-wrap: nowrap;
         transform: translate3d(0, -100%, 0);
         transition: all 0.5s ease-out, width 0.5s ease-out 0.5s;
-        
+        justify-content: center;
 
         &.show {
             //Slide in from Top
@@ -105,10 +105,6 @@
         width: 100%;
         transform: translate3d(100vw, 0, 0);
         @include easeOut;
-
-        &:nth-child(1) {
-            margin-top: 8vh;
-        }
 
         &.show {
             // Slide in from right

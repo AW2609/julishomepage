@@ -6,8 +6,9 @@
     top: 75px;
     left: 10vw;
     right: 10vw;
+    max-height: 50%;
+    overflow: auto;
     padding: 40px;
-    margin-bottom: 20px;
     border: 3px solid $secondary-color;
     background-color: $primary-color;
     opacity: 0;
