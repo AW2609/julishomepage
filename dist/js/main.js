@@ -149,8 +149,13 @@ function closeQuote() {
 }
 
 function checkPw() {
+    let password = pwInput.value;
+    let code = 0;
+    for (let i = 0; i < password.length; i++) {
+        code += password.charCodeAt(i);
+    }
 
-    if (pwInput.value === 'ichmagbier') {
+    if (code == 1035) {
         setCookie('pw', 'false');
         menuPw.classList.remove('show');
         pwWrapper.classList.add('show');
