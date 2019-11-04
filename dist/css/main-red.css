@@ -296,6 +296,9 @@
     padding: 1.5rem 2rem;
     margin: 1.5rem 0.5rem;
     transition: all 0.5s ease-out; }
+    .boxes div span {
+      display: block;
+      text-align: center; }
     .boxes div:hover {
       background: #eed54bfd;
       color: #000;
@@ -489,6 +492,11 @@ main {
     padding: 3rem 3rem 5rem 3rem; }
     main h1 {
       margin: 5vh -2rem 3vh -2rem; }
+  main#contact {
+    padding: 3rem 5px 5rem 5px;
+    margin: 0; }
+    main#contact .boxes div {
+      font-size: 1.2rem; }
   .about-info .bio ol {
     margin-left: -0.8rem; }
   .quotesWrapper {

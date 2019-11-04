@@ -13,6 +13,11 @@
         margin: 1.5rem 0.5rem;
         @include easeOut; 
 
+        span {
+            display: block;
+            text-align: center;
+        }
+
         &:hover {
             background: $secondary-color; 
             color: set-text-color($secondary-color);
