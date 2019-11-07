@@ -419,7 +419,11 @@ main {
 
 @media screen and (min-width: 1171px) {
   .quotesWrapper {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .about-info .bio h3 {
+    font-size: 1.5rem; }
+  .about-info .bio .definition {
+    text-align: center; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .quotesWrapper {

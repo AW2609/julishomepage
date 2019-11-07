@@ -3,6 +3,17 @@
     .quotesWrapper {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .about-info .bio {
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        .definition {
+            text-align: center;
+        }
+    }
 }
 
 // Desktops & Laptops 
@@ -10,6 +21,7 @@
     .quotesWrapper {
         grid-template-columns: repeat(3, 1fr);
     }
+
     .themes {
         grid-template-columns: repeat(2, 1fr);
     }
