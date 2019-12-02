@@ -165,3 +165,30 @@ function checkPw() {
         wrongPwNotification.classList.add('show');
     }
 }
+
+function toggleInfotext(img, infoparam, infotext) {
+    let infoParam = document.querySelector(infoparam);
+
+    if (!infoParam.classList.contains('show')) {
+        let http = new XMLHttpRequest();
+        http.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                infoParam.innerHTML = this.response;
+            } else {
+                infoParam.innerHTML = "Sorry, Fehler beim Laden des Infotexts aufgetreten..."
+            }
+        };
+        const infoText = 'text/infotexts/' + infotext;
+        http.open("GET", infoText, true);
+        http.send();
+        img.classList.add('active');
+        infoParam.classList.add('show');
+    }
+
+    else {
+        //infoParam.innerHTML = "";
+        img.classList.remove('active');
+        infoParam.classList.remove('show');
+    }
+
+}

@@ -228,9 +228,24 @@
     border-bottom: #c59008 5px solid; }
     .about-info .infoBox h3, .about-info .infoBox h6 {
       text-align: center; }
+    .about-info .infoBox .infobox-image {
+      width: 100%;
+      height: auto;
+      border: 3px solid #e0e0e0; }
+      .about-info .infoBox .infobox-image:hover {
+        border-color: #c59008;
+        opacity: 0.5;
+        transition: all 0.5s ease-out; }
+      .about-info .infoBox .infobox-image.active {
+        border-color: #c59008;
+        opacity: 0.5; }
     .about-info .infoBox p {
+      padding: 0 5px;
       text-align: justify;
-      padding: 0 5px; }
+      font-size: 0;
+      transition: all 0.5s ease-in-out; }
+      .about-info .infoBox p.show {
+        font-size: 1rem; }
 
 .textBox {
   position: absolute;
