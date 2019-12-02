@@ -53,9 +53,32 @@
             text-align: center;
         }
 
-        p {
-            text-align: justify;
+        .infobox-image {
+            width: 100%;
+            height: auto; 
+            border: 3px solid lighten($primary-color, 5);
+
+            &:hover{
+                border-color: $secondary-color;
+                opacity: 0.5; 
+                @include easeOut;
+            }
+
+            &.active {
+                border-color: $secondary-color;
+                opacity: 0.5; 
+            }
+        }
+
+        p{  
             padding: 0 5px;
+            text-align: justify;
+            font-size: 0;
+            transition: all 0.5s ease-in-out;
+
+            &.show {
+                font-size: 1rem;
+            }
         }
     }
 }
