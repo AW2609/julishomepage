@@ -6,6 +6,7 @@ const menuBranding = document.querySelector('.menu-branding');
 const menuNav = document.querySelector('.menu-nav');
 const navItems = document.querySelectorAll('.nav-item');
 const birthdayBtn = document.querySelector('.birthday-btn');
+const birthdayDiv = document.querySelector('.bday-div');
 const menuPw = document.querySelector('.menu-pw');
 const pwBtn = document.querySelector('.pwBtn');
 const pwInput = document.getElementById('pw');
@@ -189,6 +190,26 @@ function toggleInfotext(img, infoparam, infotext) {
         //infoParam.innerHTML = "";
         img.classList.remove('active');
         infoParam.classList.remove('show');
+    }
+
+}
+
+function toggleBdayDiv() {
+    if (birthdayBtn.classList.contains('show')) {
+        birthdayBtn.classList.remove('show');
+        birthdayDiv.classList.remove('show');
+    } else {
+        birthdayBtn.classList.add('show');
+        birthdayDiv.classList.add('show');
+    }
+}
+
+function showBdayPic(imageId) {
+    let image = document.getElementById(imageId);
+    if (image.classList.contains('show')) {
+        image.classList.remove('show');
+    } else {
+        image.classList.add('show');
     }
 
 }
