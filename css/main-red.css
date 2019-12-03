@@ -194,6 +194,50 @@
     visibility: none;
     opacity: 0;
     z-index: -1; }
+  .birthday-btn.show {
+    color: #eed54bfd; }
+
+.bday-div {
+  position: absolute;
+  margin: 15vh 10vw;
+  opacity: 0;
+  background-color: #480d0d;
+  border: 5px solid #eed54bfd;
+  padding: 10px;
+  max-width: 80vw;
+  max-height: 75vh;
+  overflow: auto;
+  transition: all 0.5s ease-out; }
+  .bday-div h1 {
+    margin-bottom: 1.5rem;
+    text-align: center; }
+  .bday-div p {
+    text-align: justify; }
+    .bday-div p span .clickme {
+      color: #eed54bfd;
+      font-weight: bold; }
+      .bday-div p span .clickme:hover {
+        cursor: pointer;
+        text-decoration: underline; }
+    .bday-div p span img {
+      position: relative;
+      max-height: 40vh;
+      max-width: 75vw;
+      margin-left: auto;
+      margin-right: auto;
+      height: 0;
+      opacity: 0;
+      transition: all 0.5s ease-out; }
+      .bday-div p span img.show {
+        display: block;
+        border: 3px solid #eed54bfd;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+        height: auto;
+        padding: 5px;
+        opacity: 1; }
+  .bday-div.show {
+    opacity: 1; }
 
 .about-info {
   display: grid;
