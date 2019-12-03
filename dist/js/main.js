@@ -195,6 +195,10 @@ function toggleInfotext(img, infoparam, infotext) {
 }
 
 function toggleBdayDiv() {
+    if (getCookie('pw') == 'true') {
+        alert('Sorry, bitte zuerst Passwort eingeben');
+        return;
+    }
     if (birthdayBtn.classList.contains('show')) {
         birthdayBtn.classList.remove('show');
         birthdayDiv.classList.remove('show');

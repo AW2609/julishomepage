@@ -370,38 +370,40 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem; }
-  .themes .option {
-    display: block;
-    padding: 8rem 2rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    border: 3px #fff solid; }
-    .themes .option.dark {
-      background: url(../img/themes/blackcat.jpg);
-      background-size: cover;
-      color: #fff; }
-    .themes .option.nightblue {
-      background: url(../img/themes/nightblue.jpg);
-      background-size: cover;
-      color: #fff; }
-    .themes .option.light {
-      background: url(../img/themes/light.jpg);
-      background-size: cover;
-      color: #000; }
-    .themes .option.dragon {
-      background: url(../img/themes/dragon.jpg);
-      background-size: cover;
-      color: #fff; }
-    .themes .option:hover {
-      opacity: 0.5;
-      border-color: #d33c16;
-      transition: all 0.5s ease-out; }
-  .themes .btn, .themes .btn-dark, .themes .btn-light {
-    text-align: center; }
-    .themes .btn i, .themes .btn-dark i, .themes .btn-light i {
-      margin-right: 10px; }
+  .themes .stylingOption {
+    min-width: fit-content; }
+    .themes .stylingOption .option {
+      display: block;
+      padding: 8rem 2rem;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      border: 3px #fff solid; }
+      .themes .stylingOption .option.dark {
+        background: url(../img/themes/blackcat.jpg);
+        background-size: cover;
+        color: #fff; }
+      .themes .stylingOption .option.nightblue {
+        background: url(../img/themes/nightblue.jpg);
+        background-size: cover;
+        color: #fff; }
+      .themes .stylingOption .option.light {
+        background: url(../img/themes/light.jpg);
+        background-size: cover;
+        color: #000; }
+      .themes .stylingOption .option.dragon {
+        background: url(../img/themes/dragon.jpg);
+        background-size: cover;
+        color: #fff; }
+      .themes .stylingOption .option:hover {
+        opacity: 0.5;
+        border-color: #d33c16;
+        transition: all 0.5s ease-out; }
+    .themes .stylingOption .btn, .themes .stylingOption .btn-dark, .themes .stylingOption .btn-light {
+      text-align: center; }
+      .themes .stylingOption .btn i, .themes .stylingOption .btn-dark i, .themes .stylingOption .btn-light i {
+        margin-right: 10px; }
 
 * {
   box-sizing: border-box; }

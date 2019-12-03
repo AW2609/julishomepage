@@ -4,51 +4,55 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem; 
 
-    .option {
-        display: block;
-        padding: 8rem 2rem;
-        font-size: 2.5rem;
-        font-weight: bold; 
-        text-align: center; 
-        width: 100%; 
-        border: 3px set-text-color($primary-color) solid;
+    .stylingOption{
+        min-width: fit-content;
 
-        &.dark {
-            background: url(../img/themes/blackcat.jpg); 
-            background-size: cover; 
-            color: #fff;
+        .option {
+            display: block;
+            padding: 8rem 2rem;
+            font-size: 2rem;
+            font-weight: bold; 
+            text-align: center; 
+            width: 100%; 
+            border: 3px set-text-color($primary-color) solid;
+
+            &.dark {
+                background: url(../img/themes/blackcat.jpg); 
+                background-size: cover; 
+                color: #fff;
+            }
+
+            &.nightblue {
+                background: url(../img/themes/nightblue.jpg);
+                background-size: cover; 
+                color: #fff;
+            }
+            
+            &.light {
+                background: url(../img/themes/light.jpg);
+                background-size: cover;
+                color: #000;
+            }
+
+            &.dragon {
+                background: url(../img/themes/dragon.jpg);
+                background-size: cover; 
+                color: #fff
+            }
+
+            &:hover {
+                opacity: 0.5; 
+                border-color: $secondary-color; 
+                @include easeOut; 
+            }
         }
 
-        &.nightblue {
-            background: url(../img/themes/nightblue.jpg);
-            background-size: cover; 
-            color: #fff;
-        }
-        
-        &.light {
-            background: url(../img/themes/light.jpg);
-            background-size: cover;
-            color: #000;
-        }
+        .btn {
+            text-align: center;
 
-        &.dragon {
-            background: url(../img/themes/dragon.jpg);
-            background-size: cover; 
-            color: #fff
-        }
-
-        &:hover {
-            opacity: 0.5; 
-            border-color: $secondary-color; 
-            @include easeOut; 
-        }
-    }
-
-    .btn {
-        text-align: center;
-
-        i {
-            margin-right: 10px;
+            i {
+                margin-right: 10px;
+            }
         }
     }
 }
