@@ -21,7 +21,6 @@
         <div class="birthday-btn" onclick="toggleBdayDiv()">
             <i class="fas fa-birthday-cake"></i>
         </div>
-
         <nav class="menu">
             <div class="menu-branding">
                 <div class="portrait"></div>
@@ -70,39 +69,60 @@
     </header>
 
     <div class="bday-div">
-        <h1>It's your <span class="text-secondary">Birthday!</span></h1>
-        <h3>Liebes Schwesterherz,</h3>
-        <p>
-            obwohl man es dir v.a. feiertechnisch kaum anmerkt - auch du wirst &auml;lter. Du hast heute Geburtstag und
-            sicherlich findest du das <span><span class="clickme" onclick="showBdayPic('mirgehtssuper')"><i
-                        class="fas fa-angle-double-right"></i>click me </span><img id="mirgehtssuper"
-                    src="img/bday/mirgehtssuper.jpg" alt="Sorry..."></span>.
-            Und ganz ehrlich.. Manchmal wird im Alter
-            doch nicht alles schlechter... <span><span class="clickme" onclick="showBdayPic('juliaklein')"><i
-                        class="fas fa-angle-double-right"></i>click
-                    me </span><img id="juliaklein" src="img/bday/juliaklein.jpg" alt="Sorry..."></span>. Ok ok, wir
-            wollen ja fair
-            bleiben, das
-            gilt f&uuml;r uns beide - <span><span class="clickme" onclick="showBdayPic('andreklein')"><i
-                        class="fas fa-angle-double-right"></i>click me </span><img id="andreklein"
-                    src="img/bday/andreklein.jpg" alt="Sorry..."></span>
-            q.e.d.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum at eos consequuntur corporis, et alias eaque!
-            Eveniet, consequuntur aut repellat animi necessitatibus ipsam labore atque laboriosam ducimus recusandae ea
-            quae non ut, nihil quos doloribus modi totam esse minima possimus molestiae nulla officiis ratione officia!
-            Commodi quam ducimus quisquam enim dolorem neque accusamus, obcaecati iure eaque magnam tempore nemo
-            inventore maxime ex. Architecto magnam quasi hic. Dolorum incidunt nulla illo, odit, accusantium blanditiis
-            praesentium doloremque rem quis libero soluta fugit neque modi illum dolores eligendi, odio rerum in
-            aliquid? Architecto eaque id veritatis quo recusandae molestiae nemo amet porro hic dicta velit suscipit
-            deleniti corrupti, tenetur rem voluptatem, accusamus officiis dolores sint voluptatibus minima placeat, ut
-            ad magnam? Sit rem distinctio reprehenderit unde dolores temporibus, dolorum doloribus ratione ipsum ex
-            nesciunt fuga accusamus cupiditate culpa corrupti! Magni repudiandae rerum voluptate. Est inventore
-            praesentium ipsam repudiandae, fuga, commodi quas error veniam dolorem architecto officia maxime a.
-            Obcaecati id harum sit perspiciatis molestiae voluptatem vero a est, impedit vitae nisi inventore voluptates
-            culpa ducimus hic! Officia quae maxime, eveniet impedit aspernatur necessitatibus architecto similique
-            consectetur tempore natus cum alias quas non ut aliquam consequatur distinctio, pariatur aliquid! Delectus
-            temporibus eveniet impedit officiis.
-        </p>
+        <div class="pw-wrapper2">
+            <h3 class="sm-heading">Bitte Passwort eingeben:
+                <div class="pw-input2">
+                    <input type="password" id="pw2" name="pw" required>
+                    <button onclick="checkPw2()" class="pwBtn2">
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
+                <p class="wrongPwNotification2">Falsches Passwort. Versuche es nochmal.</p>
+            </h3>
+        </div>
+        <div class="bday-wrapper">
+            <h1>It's your <span class="text-secondary">Birthday!</span></h1>
+            <h3>Liebes Schwesterherz,</h3>
+            <p>
+                obwohl man es dir v.a. feiertechnisch kaum anmerkt - auch du wirst &auml;lter. Du hast heute Geburtstag
+                und
+                sicherlich findest du das <span><span class="clickme" onclick="showBdayPic('mirgehtssuper')"><i
+                            class="fas fa-angle-double-right"></i>click me </span><img id="mirgehtssuper"
+                        src="img/bday/mirgehtssuper.jpg" alt="Sorry..."></span>.
+                Und ganz ehrlich.. Manchmal wird im Alter
+                doch nicht alles schlechter... <span><span class="clickme" onclick="showBdayPic('juliaklein')"><i
+                            class="fas fa-angle-double-right"></i>click
+                        me </span><img id="juliaklein" src="img/bday/juliaklein.jpg" alt="Sorry..."></span>. Ok ok, wir
+                wollen ja fair
+                bleiben, das
+                gilt f&uuml;r uns beide - <span><span class="clickme" onclick="showBdayPic('andreklein')"><i
+                            class="fas fa-angle-double-right"></i>click me </span><img id="andreklein"
+                        src="img/bday/andreklein.jpg" alt="Sorry..."></span>
+                q.e.d.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum at eos consequuntur corporis, et alias
+                eaque!
+                Eveniet, consequuntur aut repellat animi necessitatibus ipsam labore atque laboriosam ducimus recusandae
+                ea
+                quae non ut, nihil quos doloribus modi totam esse minima possimus molestiae nulla officiis ratione
+                officia!
+                Commodi quam ducimus quisquam enim dolorem neque accusamus, obcaecati iure eaque magnam tempore nemo
+                inventore maxime ex. Architecto magnam quasi hic. Dolorum incidunt nulla illo, odit, accusantium
+                blanditiis
+                praesentium doloremque rem quis libero soluta fugit neque modi illum dolores eligendi, odio rerum in
+                aliquid? Architecto eaque id veritatis quo recusandae molestiae nemo amet porro hic dicta velit suscipit
+                deleniti corrupti, tenetur rem voluptatem, accusamus officiis dolores sint voluptatibus minima placeat,
+                ut
+                ad magnam? Sit rem distinctio reprehenderit unde dolores temporibus, dolorum doloribus ratione ipsum ex
+                nesciunt fuga accusamus cupiditate culpa corrupti! Magni repudiandae rerum voluptate. Est inventore
+                praesentium ipsam repudiandae, fuga, commodi quas error veniam dolorem architecto officia maxime a.
+                Obcaecati id harum sit perspiciatis molestiae voluptatem vero a est, impedit vitae nisi inventore
+                voluptates
+                culpa ducimus hic! Officia quae maxime, eveniet impedit aspernatur necessitatibus architecto similique
+                consectetur tempore natus cum alias quas non ut aliquam consequatur distinctio, pariatur aliquid!
+                Delectus
+                temporibus eveniet impedit officiis.
+            </p>
+        </div>
     </div>
 
     <main id="home">
