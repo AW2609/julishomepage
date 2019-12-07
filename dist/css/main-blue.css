@@ -130,7 +130,7 @@
 .nav-item:nth-child(5) {
   transition-delay: 1s; }
 
-.pw-wrapper {
+.pw-wrapper, .pw-wrapper2 {
   margin: auto;
   padding: 20px;
   height: 100%;
@@ -141,26 +141,26 @@
   justify-content: center;
   max-width: 700px;
   transition: all 0.5s ease-out 0.75s; }
-  .pw-wrapper.show {
+  .pw-wrapper.show, .pw-wrapper2.show {
     opacity: 1; }
-  .pw-wrapper h3.sm-heading {
+  .pw-wrapper h3.sm-heading, .pw-wrapper2 h3.sm-heading {
     padding: 0.7rem 1rem;
     border-radius: 10px; }
-    .pw-wrapper h3.sm-heading p {
+    .pw-wrapper h3.sm-heading p, .pw-wrapper2 h3.sm-heading p {
       font-size: 0;
       line-height: 1;
       color: #d33c16;
       transition: all 0.5s ease-out; }
-      .pw-wrapper h3.sm-heading p.show {
+      .pw-wrapper h3.sm-heading p.show, .pw-wrapper2 h3.sm-heading p.show {
         font-size: 0.8rem; }
-  .pw-wrapper .pw-input {
+  .pw-wrapper .pw-input, .pw-wrapper .pw-input2, .pw-wrapper2 .pw-input, .pw-wrapper2 .pw-input2 {
     display: flex;
     justify-content: center;
     border: 3px solid #d33c16;
     border-radius: 10px;
     margin: 20px 0px;
     height: 3rem; }
-    .pw-wrapper .pw-input #pw {
+    .pw-wrapper .pw-input #pw, .pw-wrapper .pw-input #pw2, .pw-wrapper .pw-input2 #pw, .pw-wrapper .pw-input2 #pw2, .pw-wrapper2 .pw-input #pw, .pw-wrapper2 .pw-input #pw2, .pw-wrapper2 .pw-input2 #pw, .pw-wrapper2 .pw-input2 #pw2 {
       width: 80%;
       height: 100%;
       background-color: #090938;
@@ -168,13 +168,13 @@
       border-radius: 10px;
       padding: 0 5px;
       color: #d33c16; }
-    .pw-wrapper .pw-input .pwBtn {
+    .pw-wrapper .pw-input .pwBtn, .pw-wrapper .pw-input .pwBtn2, .pw-wrapper .pw-input2 .pwBtn, .pw-wrapper .pw-input2 .pwBtn2, .pw-wrapper2 .pw-input .pwBtn, .pw-wrapper2 .pw-input .pwBtn2, .pw-wrapper2 .pw-input2 .pwBtn, .pw-wrapper2 .pw-input2 .pwBtn2 {
       width: 20%;
       border: none;
       background-color: #d33c16;
       font-size: 2rem;
       transition: all 0.5s ease-out; }
-      .pw-wrapper .pw-input .pwBtn:hover {
+      .pw-wrapper .pw-input .pwBtn:hover, .pw-wrapper .pw-input .pwBtn2:hover, .pw-wrapper .pw-input2 .pwBtn:hover, .pw-wrapper .pw-input2 .pwBtn2:hover, .pw-wrapper2 .pw-input .pwBtn:hover, .pw-wrapper2 .pw-input .pwBtn2:hover, .pw-wrapper2 .pw-input2 .pwBtn:hover, .pw-wrapper2 .pw-input2 .pwBtn2:hover {
         cursor: pointer;
         width: 30%; }
 
@@ -204,38 +204,46 @@
   background-color: #090938;
   border: 5px solid #d33c16;
   padding: 10px;
-  max-width: 80vw;
+  width: 80vw;
   max-height: 75vh;
   overflow: auto;
   transition: all 0.5s ease-out; }
-  .bday-div h1 {
-    margin-bottom: 1.5rem;
-    text-align: center; }
-  .bday-div p {
-    text-align: justify; }
-    .bday-div p span .clickme {
-      color: #d33c16;
-      font-weight: bold; }
-      .bday-div p span .clickme:hover {
-        cursor: pointer;
-        text-decoration: underline; }
-    .bday-div p span img {
-      position: relative;
-      max-height: 40vh;
-      max-width: 75vw;
-      margin-left: auto;
-      margin-right: auto;
-      height: 0;
-      opacity: 0;
-      transition: all 0.5s ease-out; }
-      .bday-div p span img.show {
-        display: block;
-        border: 3px solid #d33c16;
-        margin-top: 1.2rem;
-        margin-bottom: 1.2rem;
-        height: auto;
-        padding: 5px;
-        opacity: 1; }
+  .bday-div .bday-wrapper {
+    opacity: 0;
+    font-size: 0;
+    display: none; }
+    .bday-div .bday-wrapper h1 {
+      margin-bottom: 1.5rem;
+      text-align: center; }
+    .bday-div .bday-wrapper p {
+      text-align: justify; }
+      .bday-div .bday-wrapper p span .clickme {
+        color: #d33c16;
+        font-weight: bold; }
+        .bday-div .bday-wrapper p span .clickme:hover {
+          cursor: pointer;
+          text-decoration: underline; }
+      .bday-div .bday-wrapper p span img {
+        position: relative;
+        max-height: 40vh;
+        max-width: 75vw;
+        margin-left: auto;
+        margin-right: auto;
+        height: 0;
+        opacity: 0;
+        transition: all 0.5s ease-out; }
+        .bday-div .bday-wrapper p span img.show {
+          display: block;
+          border: 3px solid #d33c16;
+          margin-top: 1.2rem;
+          margin-bottom: 1.2rem;
+          height: auto;
+          padding: 5px;
+          opacity: 1; }
+    .bday-div .bday-wrapper.show {
+      opacity: 1;
+      font-size: initial;
+      display: block; }
   .bday-div.show {
     opacity: 1; }
 

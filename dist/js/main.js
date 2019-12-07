@@ -7,11 +7,16 @@ const menuNav = document.querySelector('.menu-nav');
 const navItems = document.querySelectorAll('.nav-item');
 const birthdayBtn = document.querySelector('.birthday-btn');
 const birthdayDiv = document.querySelector('.bday-div');
+const birthdayWrapper = document.querySelector('.bday-wrapper');
 const menuPw = document.querySelector('.menu-pw');
 const pwBtn = document.querySelector('.pwBtn');
+const pwBtn2 = document.querySelector('.pwBtn2');
 const pwInput = document.getElementById('pw');
+const pwInput2 = document.getElementById('pw2');
 const pwWrapper = document.querySelector('.pw-wrapper');
+const pwWrapper2 = document.querySelector('.pw-wrapper2');
 const wrongPwNotification = document.querySelector('.wrongPwNotification');
+const wrongPwNotification2 = document.querySelector('.wrongPwNotification2');
 
 // Set Initial State Of Menu
 let showMenu = false;
@@ -30,6 +35,20 @@ pwInput.addEventListener('keyup', function (event) {
     }
 });
 
+if (pwInput2) {
+    pwInput2.addEventListener('keyup', function (event) {
+        // number 13 = Enter
+        if (event.keyCode === 13) {
+            event.preventDefault(); // just in case
+            pwBtn2.click();
+        } else {
+            if (wrongPwNotification2.classList.contains('show')) {
+                wrongPwNotification2.classList.remove('show');
+            }
+        }
+    });
+}
+
 function toggleMenu() {
 
     if (!showMenu) {
@@ -38,6 +57,10 @@ function toggleMenu() {
 
         if (birthdayBtn) {
             birthdayBtn.classList.add('close');
+
+            if (birthdayBtn.classList.contains('show')) {
+                toggleBdayDiv();
+            }
         }
         menuBtn.classList.add('close');
         menu.classList.add('show');
@@ -159,11 +182,28 @@ function checkPw() {
     if (code == 1035) {
         setCookie('pw', 'false');
         menuPw.classList.remove('show');
-        pwWrapper.classList.add('show');
+        pwWrapper.classList.remove('show');
         menuNav.classList.add('show');
         navItems.forEach(item => item.classList.add('show'));
     } else {
         wrongPwNotification.classList.add('show');
+    }
+}
+
+function checkPw2() {
+    let password = pwInput2.value;
+    let code = 0;
+    for (let i = 0; i < password.length; i++) {
+        code += password.charCodeAt(i);
+    }
+
+    if (code == 1035) {
+        setCookie('pw', 'false');
+        pwWrapper2.classList.remove('show');
+        pwWrapper2.style.display = "none";
+        birthdayWrapper.classList.add('show');
+    } else {
+        wrongPwNotification2.classList.add('show');
     }
 }
 
@@ -195,16 +235,23 @@ function toggleInfotext(img, infoparam, infotext) {
 }
 
 function toggleBdayDiv() {
-    if (getCookie('pw') == 'true') {
-        alert('Sorry, bitte zuerst Passwort eingeben');
-        return;
-    }
+
     if (birthdayBtn.classList.contains('show')) {
         birthdayBtn.classList.remove('show');
         birthdayDiv.classList.remove('show');
     } else {
         birthdayBtn.classList.add('show');
         birthdayDiv.classList.add('show');
+    }
+
+    if (getCookie('pw') == 'true') {
+        pwWrapper2.classList.add('show');
+    } else {
+        // pwWrapper2.classList.remove('show');
+        // pwWrapper2.style.height = "0";
+        pwWrapper2.style.display = "none";
+        birthdayWrapper.classList.add('show');
+        // toggleBdayDiv();
     }
 }
 
