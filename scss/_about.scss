@@ -53,6 +53,10 @@
             text-align: center;
         }
 
+        h6 {
+            font-size: 0.8rem;
+        }
+
         .infobox-image {
             width: 100%;
             height: auto; 
@@ -79,6 +83,11 @@
             &.show {
                 font-size: 1rem;
             }
+        }
+
+        a {
+            text-align: center;
+            font-size: 0.9rem;
         }
     }
 }

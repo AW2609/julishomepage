@@ -207,8 +207,10 @@ function checkPw2() {
     }
 }
 
-function toggleInfotext(img, infoparam, infotext) {
+function toggleInfotext(infonr, infoparam, infotext) {
     let infoParam = document.querySelector(infoparam);
+    let img = document.getElementById('info-img' + infonr);
+    let btn = document.getElementById('info-btn' + infonr);
 
     if (!infoParam.classList.contains('show')) {
         let http = new XMLHttpRequest();
@@ -224,12 +226,14 @@ function toggleInfotext(img, infoparam, infotext) {
         http.send();
         img.classList.add('active');
         infoParam.classList.add('show');
+        btn.innerHTML = '<i class="fas fa-angle-double-up"></i>&nbsp;Read less...';
     }
 
     else {
         //infoParam.innerHTML = "";
         img.classList.remove('active');
         infoParam.classList.remove('show');
+        btn.innerHTML = '<i class="fas fa-align-justify"></i>&nbsp; Read more...';
     }
 
 }

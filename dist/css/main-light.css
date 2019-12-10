@@ -280,6 +280,8 @@
     border-bottom: #c59008 5px solid; }
     .about-info .infoBox h3, .about-info .infoBox h6 {
       text-align: center; }
+    .about-info .infoBox h6 {
+      font-size: 0.8rem; }
     .about-info .infoBox .infobox-image {
       width: 100%;
       height: auto;
@@ -298,6 +300,9 @@
       transition: all 0.5s ease-in-out; }
       .about-info .infoBox p.show {
         font-size: 1rem; }
+    .about-info .infoBox a {
+      text-align: center;
+      font-size: 0.9rem; }
 
 .textBox {
   position: absolute;
