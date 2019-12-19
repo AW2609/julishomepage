@@ -8,6 +8,7 @@ const navItems = document.querySelectorAll('.nav-item');
 const birthdayBtn = document.querySelector('.birthday-btn');
 const birthdayDiv = document.querySelector('.bday-div');
 const birthdayWrapper = document.querySelector('.bday-wrapper');
+const birthdayInformationDiv = document.querySelector('.bday-informationDiv');
 const menuPw = document.querySelector('.menu-pw');
 const pwBtn = document.querySelector('.pwBtn');
 const pwBtn2 = document.querySelector('.pwBtn2');
@@ -97,6 +98,7 @@ function getConfig() {
     // check for Cookies
     theme = getCookie('css');
     pw = getCookie('pw');
+    bdayCookie = getCookie('bday');
 
     if (theme) {
         let pagestyle = document.getElementById('pagestyle');
@@ -107,6 +109,25 @@ function getConfig() {
     if (!pw) {
         setCookie('pw', 'true');
     }
+
+    // check if bdayCookie exists
+    // show notification if not
+    if (!bdayCookie || getCookie('bday') != 'false') {
+        showBdayNotification();
+        setCookie('bday', 'false');
+    }
+}
+
+function showBdayNotification() {
+    birthdayBtn.classList.add('show');
+    birthdayInformationDiv.classList.add('show');
+    setTimeout(
+        function () {
+            if (!birthdayDiv.classList.contains('show')) {
+                birthdayBtn.classList.remove('show');
+            }
+            birthdayInformationDiv.classList.remove('show');
+        }, 5000);
 }
 
 function changeTheme(theme) {
@@ -240,7 +261,8 @@ function toggleInfotext(infonr, infoparam, infotext) {
 
 function toggleBdayDiv() {
 
-    if (birthdayBtn.classList.contains('show')) {
+    if (birthdayBtn.classList.contains('show') &&
+        !birthdayInformationDiv.classList.contains('show')) {
         birthdayBtn.classList.remove('show');
         birthdayDiv.classList.remove('show');
     } else {
