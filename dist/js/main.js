@@ -259,12 +259,18 @@ function toggleBdayDiv() {
     }
 }
 
+let timeout;
+
 function showBdayPic(imageId) {
     let image = document.getElementById(imageId);
     if (image.classList.contains('show')) {
         image.classList.remove('show');
+        if (timeout) {
+            clearTimeout(timeout);
+        }
     } else {
         image.classList.add('show');
+        timeout = setTimeout(showBdayPic, 4000, imageId);
     }
 
 }

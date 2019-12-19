@@ -63,6 +63,7 @@
             border: 3px solid lighten($primary-color, 5);
 
             &:hover{
+                cursor: pointer;
                 border-color: $secondary-color;
                 opacity: 0.5; 
                 @include easeOut;
