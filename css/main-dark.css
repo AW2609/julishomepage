@@ -240,6 +240,10 @@
           height: auto;
           padding: 5px;
           opacity: 1; }
+    .bday-div .bday-wrapper .celebrationDiv {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #eece1a; }
     .bday-div .bday-wrapper.show {
       opacity: 1;
       font-size: initial;
@@ -287,6 +291,7 @@
       height: auto;
       border: 3px solid #404040; }
       .about-info .infoBox .infobox-image:hover {
+        cursor: pointer;
         border-color: #eece1a;
         opacity: 0.5;
         transition: all 0.5s ease-out; }
