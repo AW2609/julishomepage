@@ -252,6 +252,8 @@
     opacity: 1; }
 
 .bday-informationDiv {
+  display: flex;
+  flex-wrap: nowrap;
   color: #c59008;
   position: absolute;
   height: 25;
@@ -261,6 +263,10 @@
   font-size: 0;
   opacity: 0;
   transition: all 2s ease-out; }
+  .bday-informationDiv div {
+    margin: 0 5px; }
+    .bday-informationDiv div span {
+      margin-right: -10px; }
   .bday-informationDiv.show {
     font-size: 1rem;
     opacity: 1; }
