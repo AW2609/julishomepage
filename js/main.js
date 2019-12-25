@@ -52,7 +52,7 @@ if (pwInput2) {
 
 function toggleMenu() {
 
-    if (birthdayInformationDiv.classList.contains('show')) {
+    if (birthdayInformationDiv) {
         birthdayInformationDiv.classList.remove('show');
     }
 
@@ -264,8 +264,6 @@ function toggleInfotext(infonr, infoparam, infotext) {
 }
 
 function toggleBdayDiv() {
-
-    console.log('togglebdaydiv');
     if (birthdayInformationDiv.classList.contains('show')) {
         birthdayInformationDiv.classList.remove('show');
         toggleBdayDiv();
