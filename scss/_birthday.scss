@@ -105,6 +105,8 @@
 }
 
 .bday-informationDiv {
+    display: flex; 
+    flex-wrap: nowrap;
     color: $secondary-color;
     position: absolute;
     height: 25;
@@ -114,6 +116,14 @@
     font-size: 0;
     opacity: 0;
     transition: all 2s ease-out;
+
+    div {
+        margin: 0 5px;
+
+        span {
+            margin-right: -10px;
+        }
+    }
     
     &.show {
         font-size: 1rem;

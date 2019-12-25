@@ -52,6 +52,10 @@ if (pwInput2) {
 
 function toggleMenu() {
 
+    if (birthdayInformationDiv.classList.contains('show')) {
+        birthdayInformationDiv.classList.remove('show');
+    }
+
     if (!showMenu) {
         // Set Menu State 
         showMenu = true;
@@ -121,13 +125,13 @@ function getConfig() {
 function showBdayNotification() {
     birthdayBtn.classList.add('show');
     birthdayInformationDiv.classList.add('show');
-    setTimeout(
-        function () {
-            if (!birthdayDiv.classList.contains('show')) {
-                birthdayBtn.classList.remove('show');
-            }
-            birthdayInformationDiv.classList.remove('show');
-        }, 5000);
+    // setTimeout(
+    //     function () {
+    //         if (!birthdayDiv.classList.contains('show')) {
+    //             birthdayBtn.classList.remove('show');
+    //         }
+    //         birthdayInformationDiv.classList.remove('show');
+    //     }, 5000);
 }
 
 function changeTheme(theme) {
@@ -260,6 +264,12 @@ function toggleInfotext(infonr, infoparam, infotext) {
 }
 
 function toggleBdayDiv() {
+
+    console.log('togglebdaydiv');
+    if (birthdayInformationDiv.classList.contains('show')) {
+        birthdayInformationDiv.classList.remove('show');
+        toggleBdayDiv();
+    }
 
     if (birthdayBtn.classList.contains('show') &&
         !birthdayInformationDiv.classList.contains('show')) {
