@@ -251,7 +251,7 @@ function toggleInfotext(infonr, infoparam, infotext) {
         http.send();
         img.classList.add('active');
         infoParam.classList.add('show');
-        btn.innerHTML = '<i class="fas fa-angle-double-up"></i>&nbsp;Read less...';
+        btn.innerHTML = '<i class="fas fa-angle-double-up"></i>&nbsp;Back';
     }
 
     else {
