@@ -181,9 +181,9 @@ function showQuote(text, element) {
     let http = new XMLHttpRequest();
     http.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            textContent.textContent = this.responseText;
+            textContent.innerHTML = this.response;
         } else {
-            textContent.textContent = "Sorry, Fehler beim Laden des Zitats aufgetreten..."
+            textContent.innerHTML = "Sorry, Fehler beim Laden des Zitats aufgetreten..."
         }
     };
 
